@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicios Aula 4</title>
-    <script src="\Toffoli cursos\index.js"></script>
+    <script src="index.js"></script>
 </head>
 
 
 
 <body onload="setInfoImg()">
+
+    <div class="bg"></div>
     <style>
+        .bg {
+            height: 100%;
+            background-image: url("Background.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         body {
-            background-color: antiquewhite;
+            background-color: rgb(216, 216, 215);
         }
 
         .container {
@@ -29,8 +39,14 @@
             color: rgb(51, 56, 94);
         }
 
+
+
         h1 {
-            color: rgb(27, 64, 146);
+            color: rgb(71, 69, 69)
+        }
+
+        h2 {
+            color: rgb(67, 68, 141);
         }
 
         h1:hover {
@@ -46,7 +62,10 @@
         }
     </style>
 
-    <h1>Lista de pokemons</h1>
+    <h1>
+        <font face="Verdana"> Pokemons list </font>
+
+    </h1>
     <div class="container">
 
         <div id="infosAnimes"></div>
