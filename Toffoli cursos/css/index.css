@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(216, 216, 215);
+}
+
+.container {
+    margin-left: 20px;
+}
+
+p {
+    color: rgb(51, 56, 94);
+}
+
+h1 {
+    color: rgb(71, 69, 69)
+}
+
+h2 {
+    color: rgb(67, 68, 141);
+}
+
+h1:hover {
+    color: rgb(36, 60, 239);
+}
+
+
+button {
+    padding: 10px;
+    background-color: rgb(37, 31, 31);
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.title {
+    font-family: 'Verdana';
+} 
