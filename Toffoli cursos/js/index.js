@@ -1,7 +1,7 @@
 const infoImgsPokemons = [
     { name: 'Articuno', img: './Imgs/articuno.jpg', info: ' Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.' },
     { name: 'Dialga', img: './Imgs/dialga.jpg', info: 'A Pokémon spoken of in legend. It is said that time began moving when Dialga was born.' },
-    { name: 'Pikachu', img: './Imgs/Pikachu.jpg', info: 'ts nature is to store up electricity. Forests where nests of Pikachu live are dangerous, since the trees are so often struck by lightning.' },
+    { name: 'Pikachu', img: './Imgs/Pikachu.jpg', info: 'his nature is to store up electricity. Forests where nests of Pikachu live are dangerous, since the trees are so often struck by lightning.' },
     { name: 'Raikou', img: './Imgs/raikou.jpg', info: 'Raikou embodies the speed of lightning. The roars of this Pokémon send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.' },
     { name: 'Gengar', img: './Imgs/gengar.png', info: 'You can hear tales told all over the world about how Gengar will pay a visit to children who are naughty.' },
     { name: 'Charmander', img: './Imgs/Charmander.png', info: 'The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.' },
@@ -19,9 +19,13 @@ function setInfoImg() {
                 <h2> <font face="Verdana"> ${infoPokemon.name} </h2>
                 </h4>
                 </p
+                
                 <p>
-                <img src="${infoPokemon.img}" width = 450px height = 350px>
+                
+                <img src="${infoPokemon.img}" width = 450px height = 350px ">
+                
                </p>
+               
                 <p>
                 <p> <font size="4" face="Verdana"> ${infoPokemon.info}<p>
                 </p>
