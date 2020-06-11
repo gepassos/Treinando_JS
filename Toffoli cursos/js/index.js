@@ -10,6 +10,10 @@ const infoImgsPokemons = [
     { name: 'Squirtle', img: './Imgs/Squirtle.png', info: 'Squirtles shell is not merely used for protection.' }
 ]
 
+
+
+
+
 function setInfoImg() {
     let myHtml = '';
     for (infoPokemon of infoImgsPokemons) {
@@ -35,4 +39,9 @@ function setInfoImg() {
     elementInfosAnimes.innerHTML = myHtml;
 }
 
+
+function adicionarPokemon() {
+
+
+}
 
