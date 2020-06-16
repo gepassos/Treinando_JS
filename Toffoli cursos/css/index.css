@@ -1,12 +1,36 @@
 body {
-    background-color: rgb(180, 180, 177);
-    margin-left: 30px;
+    background-color: rgb(175, 175, 164);
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 2em;
+    height: 2em;
+    margin-left: 15px;
+    vertical-align: -0.5em;
 }
 
 
-.homePageButton {
+.borderdiv {
+    border-style: outset;
+    border-width: medium;
+    background-color: rgba(231, 228, 231, 0.849);
+  }
+
+.alinhar { 
+
+    margin-left: 700px;
+    width: 500px;
+}
+.body-content{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.imgsPokemon {
     margin-left: 0px;
 }
+
 
 p {
     color: rgb(51, 56, 94);
