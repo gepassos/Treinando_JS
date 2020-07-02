@@ -51,15 +51,10 @@ function removeClassNav() {
 
 
 
-function addClassNav() {
-    let classAdd = document.querySelectorAll('.nav-link')
-    let urlPage = window.location.pathname
-    tagA = document.getElementsByTagName('a')
-    for (let i = 0; i < classAdd.length; i++) {
-        if (urlPage) {
-            classAdd[i].classList.add('active')
-        }
-    }
+function addClassNav(id) {
+    const itemMenu = document.getElementById(id)
+
+    itemMenu.classList.add('active')
 }
 
 

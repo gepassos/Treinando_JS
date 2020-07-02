@@ -10,6 +10,18 @@ input[type=radio] {
     vertical-align: -0.5em;
 }
 
+.espacamento-formulario{
+    margin-bottom: 15px;
+}
+.button-cadastrar{
+    margin-top: 20px;
+}
+.border-cadastro {
+    margin: 15px;
+}
+.menuSuperior { 
+    margin-bottom: 25px;
+}
 
 .borderdiv {
     border-style: outset;
