@@ -15,24 +15,6 @@
 
 
 <body onload="setInfoImg()">
-    <!-- <div id="verificadorClasses">
-        
-        <ul class="navbar navbar-dark bg-dark" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a id="home" class="nav-link active" id="home-tab" data-toggle="tab" href="index.html" role="tab"
-                    aria-controls="home" aria-selected="true">PAGINA INICIAL</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a id="page2" class="nav-link" id="profile-tab" data-toggle="tab" href="page2.html" role="tab"
-                    aria-controls="profile" aria-selected="false">PAGINA 2</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a id="page3" class="nav-link" id="contact-tab" data-toggle="tab" href="#" role="tab"
-                    aria-controls="contact" aria-selected="false">PAGINA 3</a>
-            </li>
-        </ul>
-        <br>
-    </div> -->
     <div class="menuSuperior">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand " href="index.html">Pokemons </a>
@@ -59,6 +41,7 @@
     </div>
     <script src="../js/index.js"></script>
     <script>
+        initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('home')
     </script>

@@ -50,7 +50,7 @@
                         <strong>
                             <label>Nome: </label>
                         </strong>
-                        <input class="form-control form-control-lg" type="text" id="nomePokemonCadastrado">
+                        <input required class="form-control form-control-lg" type="text" id="nomePokemonCadastrado">
                     </div>
                     <div class="col-6 espacamento-formulario  ">
                         <strong>
@@ -67,7 +67,7 @@
                             <option value="tipoGrama">Grama</option>
                             <option value="tipoLutador">Lutador</option>
                             <option value="tipoMetal">Metal</option>
-                            <option value="tipoNormal">Normal</option>
+                            <option selected value="tipoNormal">Normal</option>
                             <option value="tipoInseto">Inseto</option>
                             <option value="tipoPedra">Pedra</option>
                             <option value="tipoTerrestre">Terrestre</option>
@@ -86,14 +86,14 @@
 
                             <label for="">MASCULINO</label>
                         </strong>
-                        <input class="" type="radio" name="sexo" id="radioM" value="M">
+                        <input  class="" type="radio" name="sexo" id="radioM" value="M">
                     </div>
                     <div class="col-3 espacamento-formulario  ">
 
                         <strong>
                             <label for="sexoF">FEMININO</label>
                         </strong>
-                        <input class="" type="radio" name="sexo" id="radioF" value="F">
+                        <input  class="" type="radio" name="sexo" id="radioF" value="F">
                     </div>
 
                     <div class="col-6 espacamento-formulario  ">
@@ -102,6 +102,12 @@
                             <label for="textDescription">Descrição :</label>
                         </strong>
                         <textarea class="form-control form-control-lg" id="textDescription" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <strong><label for="">Link da Imagem</label></strong> 
+                        <input required type="text" class="form-control" id="linkImg">
                     </div>
                 </div>
 
@@ -120,7 +126,7 @@
                 <div class="row">
                     <div class="col"></div>
                     <div class="col-l espacamento-formulario  g-8">
-                        <input class="btn btn-dark btn-lg btn-block button-cadastrar " type="button" value="Cadastrar">
+                        <button required class="btn btn-dark btn-lg btn-block button-cadastrar "  onclick="cadastrarPokemon()">Cadastrar</button>
                     </div>
                     <div class="col"></div>
                 </div>
@@ -133,6 +139,7 @@
     <script src="../js/page2.js"></script>
     <script src="../js/index.js"></script>
     <script>
+        initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('page2')
     </script>
