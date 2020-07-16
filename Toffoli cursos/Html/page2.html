@@ -17,26 +17,8 @@
 </head>
 
 <body>
-    <div class="menuSuperior">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand " href="index.html">Pokemons </a>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a id="home" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="page2" class="nav-link" href="page2.html">Page 2</a>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
+    <div id="menuDiv">
     </div>
-
-
-
-
 
     <div class="body-content borderdiv">
         <div class="border-cadastro">
@@ -86,14 +68,14 @@
 
                             <label for="">MASCULINO</label>
                         </strong>
-                        <input  class="" type="radio" name="sexo" id="radioM" value="M">
+                        <input class="" type="radio" name="sexo" id="radioM" value="M">
                     </div>
                     <div class="col-3 espacamento-formulario  ">
 
                         <strong>
                             <label for="sexoF">FEMININO</label>
                         </strong>
-                        <input  class="" type="radio" name="sexo" id="radioF" value="F">
+                        <input class="" type="radio" name="sexo" id="radioF" value="F">
                     </div>
 
                     <div class="col-6 espacamento-formulario  ">
@@ -106,7 +88,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <strong><label for="">Link da Imagem</label></strong> 
+                        <strong><label for="">Link da Imagem</label></strong>
                         <input required type="text" class="form-control" id="linkImg">
                     </div>
                 </div>
@@ -114,19 +96,12 @@
 
             </div>
 
-
-
-
-
-
-
-
-
             <div>
                 <div class="row">
                     <div class="col"></div>
                     <div class="col-l espacamento-formulario  g-8">
-                        <button required class="btn btn-dark btn-lg btn-block button-cadastrar "  onclick="cadastrarPokemon()">Cadastrar</button>
+                        <button required class="btn btn-dark btn-lg btn-block button-cadastrar "
+                            onclick="cadastrarPokemon()">Cadastrar</button>
                     </div>
                     <div class="col"></div>
                 </div>
@@ -139,6 +114,7 @@
     <script src="../js/page2.js"></script>
     <script src="../js/index.js"></script>
     <script>
+        menuDiv()
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('page2')

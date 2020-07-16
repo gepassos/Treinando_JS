@@ -9,24 +9,24 @@ const infoImgsPokemons = [
     { name: 'Charizard', img: '../imgs/Charizard.png', info: 'Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.' },
     { name: 'Squirtle', img: '../imgs/Squirtle.png', info: 'Squirtles shell is not merely used for protection.' }
 ]
-function initLocalStorage(infoImgsPokemons){
+function initLocalStorage(infoImgsPokemons) {
     let getLocalstorage = getAllInfoImgsPokemons()
-    if (!getLocalstorage){
+    if (!getLocalstorage) {
         localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
         getLocalstorage = getAllInfoImgsPokemons()
     }
     return getLocalstorage
 }
 
-function getAllInfoImgsPokemons(){
+function getAllInfoImgsPokemons() {
     const pokemonLocalStorage = localStorage.getItem('infoImgsPokemons')
-    if (!pokemonLocalStorage || pokemonLocalStorage == undefined || pokemonLocalStorage == 'undefined'){
-       return ''
+    if (!pokemonLocalStorage || pokemonLocalStorage == undefined || pokemonLocalStorage == 'undefined') {
+        return ''
     }
     return JSON.parse(pokemonLocalStorage)
 }
 
-function setinfoImgsPokemons(value){
+function setinfoImgsPokemons(value) {
     const localStoragePokemon = getAllInfoImgsPokemons()
     localStoragePokemon.push(value)
     localStorage.setItem('infoImgsPokemons', JSON.stringify(localStoragePokemon))
@@ -80,3 +80,32 @@ function addClassNav(id) {
 }
 
 
+function menuDiv() {
+    const textDiv = document.getElementById('menuDiv')
+    let divHtml = ` <div class="menuSuperior">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand " href="index.html">Pokemons </a>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a id="home" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a id="page2" class="nav-link" href="page2.html">Register</a>
+                </li>
+                <li class="nav-item">
+                <a id="editPage" class="nav-link" href="editPage.html">Edit</a>
+                </li>
+                <li class="nav-item">
+                    <a id="deletePage" class="nav-link" href="deletePage.html">Delete</a>
+                </li>
+               
+            </ul>
+
+        </div>
+    </nav>
+</div>
+`
+
+    textDiv.innerHTML = divHtml;
+}

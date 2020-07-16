@@ -10,30 +10,14 @@
     <link rel="stylesheet" href="../css/index.css">
 
 
-
 </head>
 
 
 <body onload="setInfoImg()">
-    <div class="menuSuperior">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand " href="index.html">Pokemons </a>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a id="home" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="page2" class="nav-link" href="page2.html">Page 2</a>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
-    </div>
+    <div id="menuDiv"></div>
 
     <div class="body-content ">
-       
+
         <h1 class="title">Pokemons list </h1>
         <div class="imgsPokemon">
             <div id="infosAnimes"></div>
@@ -41,6 +25,7 @@
     </div>
     <script src="../js/index.js"></script>
     <script>
+        menuDiv()
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('home')
