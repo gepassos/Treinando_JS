@@ -24,8 +24,7 @@ function clearFormPokemon(){
     document.getElementById('selectTipo').value = ''
     document.getElementById('linkImg').value = ''
     document.getElementById('textDescription').value = ''
-    document.getElementById('radioM').value = ''
-    document.getElementById('radioF').value = ''
+    
 }
 
 function cadastrarPokemon() {
