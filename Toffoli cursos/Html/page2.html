@@ -11,7 +11,7 @@
 
     <script>
         function homePage() {
-            window.open('index.html')
+            window.open('../index.html')
         }
     </script>
 </head>
@@ -113,8 +113,16 @@
 
     <script src="../js/page2.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/services.js"></script>
+
     <script>
-        menuDiv()
+        objPath = {
+            index: '../index.html',
+            register: './page2.html',
+            edit: './editPage.html',
+            delete: './deletePage.html'
+        }
+        menuDiv(objPath)
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('page2')

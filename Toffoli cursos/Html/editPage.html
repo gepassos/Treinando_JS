@@ -34,8 +34,16 @@
     </div>
 
     <script src="../js/index.js"></script>
+    <script src="../js/services.js"></script>
+
     <script>
-        menuDiv()
+         objPath = {
+            index: '../index.html',
+            register: './page2.html',
+            edit: './editPage.html',
+            delete: './deletePage.html'
+        }
+        menuDiv(objPath)
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('editPage')

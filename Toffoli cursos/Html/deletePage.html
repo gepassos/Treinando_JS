@@ -25,20 +25,32 @@
                     <div class="col">
                         <strong><label for="">Pokemon Name: </label></strong>
                         <input type="text" id="nameTyped" placeholder="Delete your pokemon">
-                        <button onclick="pokemonRemover()" value="Delete">Delete</button>
+                        <button onclick="pokemonRemover()" class="btn btn-danger" value="Delete">Delete</button>
                     </div>
                 </div>
             </div>
+            <div id="alertsExclude"></div>
+            <div id="listToRemove"></div>
+
         </div>
     </div>
 
     <script src="../js/index.js"></script>
     <script src="../js/excluir.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/alert.js"></script>
     <script>
-        menuDiv()
+          objPath = {
+            index: '../index.html',
+            register: './page2.html',
+            edit: './editPage.html',
+            delete: './deletePage.html'
+        }
+        menuDiv(objPath)
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('deletePage')
+        listToExclude()
     </script>
 </body>
 
