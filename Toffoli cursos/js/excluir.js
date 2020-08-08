@@ -28,7 +28,7 @@ function pokemonRemoverById(id, name) {
 
 function listToExclude() {
     // {"name":"Gustavo","img":"","info":"dcasdsadsa sd sdsa","sexo":"F","type":"tipoNormal"}
-    
+
     const imgsPokemons = getAllInfoImgsPokemons()
     const headerHtml = `
     <table class="table">
@@ -42,6 +42,7 @@ function listToExclude() {
             <th scope="col">Sexo</th>
             <th scope="col">Type</th>
             <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
           </tr>
         </thead>
         <tbody>
@@ -49,10 +50,10 @@ function listToExclude() {
     let myHtml = headerHtml;
     const footerHtml = ` </table>`
     for (index in imgsPokemons) {
-        
+
         myHtml += `
           <tr>
-            <td>${parseInt( index )+ 1}</td>
+            <td>${parseInt(index) + 1}</td>
             <td>${index}</td>
             <td><img src="${dataValidation(imgsPokemons[index].img)}" width="90px" ></td>
             <td>${dataValidation(imgsPokemons[index].name)}</td>
@@ -60,16 +61,17 @@ function listToExclude() {
             <td>${dataValidation(imgsPokemons[index].sexo)}</td>
             <td>${dataValidation(imgsPokemons[index].type)}</td>
             <td><button onclick="pokemonRemoverById(${index}, '${imgsPokemons[index].name}')" class="btn btn-danger" value="Delete">Delete</button></td>
+            <td><button onclick="pokemonEditGetInfo(${index}, '${imgsPokemons[index].name}')" class="btn btn-danger" value="Edit">Edit</button></td>
           </tr>
                 `;
 
-    
+
     }
-    myHtml+= footerHtml;
+    myHtml += footerHtml;
     const elementInfosAnimes = document.getElementById('listToRemove');
     elementInfosAnimes.innerHTML = myHtml;
-    
-    
+
+
 }
 
 

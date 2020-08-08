@@ -16,7 +16,16 @@ function setinfoImgsPokemons(value) {
 
 
 
-function dataValidation(data){
-    if(!data) return ''
+function dataValidation(data) {
+    if (!data) return ''
     return data
 }
+
+function edit(itemPokemon, id) {
+    const infoImgsPokemons = getAllInfoImgsPokemons()
+    let infoPokemon = infoImgsPokemons[id]
+    infoPokemon.name = ''
+    infoImgsPokemons[id] = infoPokemon
+    localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
+}
+

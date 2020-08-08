@@ -4,41 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon Edits</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
-
-    <script>
-        function homePage() {
-            window.open('../index.html')
-        }
-    </script>
 </head>
 
 <body>
+
     <div id="menuDiv">
     </div>
 
     <div class="body-content borderdiv">
         <div class="border-cadastro">
             <div>
-                <h1 class="title">Cadastro de pokemon</h1>
+                <h1 class="title">PokeEdit</h1>
             </div>
 
+            <div class="form ">
+                <div class="row">
+                    <div class="col">
+                        <strong><label for="">Pokemon Name: </label></strong>
+                        <input type="text" id="nameTypedEdit" placeholder="Edit your pokemon">
+                        <button onclick="pokemonEditByName()" value="Edit">Edit</button>
+                    </div>
+                </div>
+            </div>
             <div class="form ">
                 <div class="row">
                     <div class="col-6 espacamento-formulario  ">
                         <strong>
                             <label>Nome: </label>
                         </strong>
-                        <input required class="form-control form-control-lg" type="text" id="nomePokemonCadastrado">
+                        <input required class="form-control form-control-lg" type="text" id="pokemonNameEdit">
                     </div>
                     <div class="col-6 espacamento-formulario  ">
                         <strong>
                             <label>Tipo do pokemon: </label>
                         </strong>
-                        <select class="form-control form-control-lg" name="Tipo do pokemon" id="selectTipo">
+                        <select class="form-control form-control-lg" name="Tipo do pokemon" id="selectTypeEdit">
                             <option value="selecione">::Select::</option>
                             <option value="tipoAgua">Água</option>
                             <option value="tipoEletrico">Elétrico</option>
@@ -101,32 +105,40 @@
                     <div class="col"></div>
                     <div class="col-l espacamento-formulario  g-8">
                         <button required class="btn btn-dark btn-lg btn-block button-cadastrar "
-                            onclick="cadastrarPokemon()">Cadastrar</button>
+                            onclick="editPokemon()">Edit</button>
                     </div>
                     <div class="col"></div>
                 </div>
             </div>
-            </form>
+
 
         </div>
     </div>
 
-    <script src="../js/page2.js"></script>
+
+
+
+
+
+
+
     <script src="../js/index.js"></script>
     <script src="../js/services.js"></script>
+    <script src="../js/edit.js"></script>
 
     <script>
         objPath = {
             index: '../index.html',
-            register: './page2.html',
-            edit: './editPage.html',
-            delete: './deletePage.html'
+            register: './register.html',
+            edit: './edit.html',
+            delete: './pokemonManager.html'
         }
         menuDiv(objPath)
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
-        addClassNav('page2')
+        addClassNav('edit')
     </script>
 </body>
+
 
 </html>

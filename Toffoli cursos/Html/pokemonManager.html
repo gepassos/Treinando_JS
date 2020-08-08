@@ -17,7 +17,7 @@
     <div class="body-content borderdiv">
         <div class="border-cadastro">
             <div>
-                <h1 class="title">Pokemon Remover</h1>
+                <h1 class="title">Pokemon Manager</h1>
             </div>
 
             <div class="form ">
@@ -40,16 +40,16 @@
     <script src="../js/services.js"></script>
     <script src="../js/alert.js"></script>
     <script>
-          objPath = {
+        objPath = {
             index: '../index.html',
-            register: './page2.html',
-            edit: './editPage.html',
-            delete: './deletePage.html'
+            register: './register.html',
+            edit: './edit.html',
+            delete: './pokemonManage.html'
         }
         menuDiv(objPath)
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
-        addClassNav('deletePage')
+        addClassNav('pokemonManager')
         listToExclude()
     </script>
 </body>
