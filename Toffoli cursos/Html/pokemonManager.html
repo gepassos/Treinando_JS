@@ -26,6 +26,7 @@
                         <strong><label for="">Pokemon Name: </label></strong>
                         <input type="text" id="nameTyped" placeholder="Delete your pokemon">
                         <button onclick="pokemonRemover()" class="btn btn-danger" value="Delete">Delete</button>
+
                     </div>
                 </div>
             </div>
@@ -39,12 +40,14 @@
     <script src="../js/excluir.js"></script>
     <script src="../js/services.js"></script>
     <script src="../js/alert.js"></script>
+    <script src="../js/edit.js"></script>
+
     <script>
         objPath = {
             index: '../index.html',
             register: './register.html',
             edit: './edit.html',
-            delete: './pokemonManage.html'
+            delete: './pokemonManager.html'
         }
         menuDiv(objPath)
         initLocalStorage(infoImgsPokemons)

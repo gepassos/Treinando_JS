@@ -19,18 +19,18 @@ function getFormCreatePokemon() {
     return false;
 }
 
-function clearFormPokemon(){
+function clearFormPokemon() {
     document.getElementById('nomePokemonCadastrado').value = ''
     document.getElementById('selectTipo').value = ''
     document.getElementById('linkImg').value = ''
     document.getElementById('textDescription').value = ''
-    
+
 }
 
 function cadastrarPokemon() {
     const infoPokemon = getFormCreatePokemon()
     if (!infoPokemon)
-        return alert('Preencha todos os campos')
+        return alert('Please fill out all the fields correctly')
 
     setinfoImgsPokemons(infoPokemon)
     clearFormPokemon()

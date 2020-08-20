@@ -1,11 +1,7 @@
-function pokemonEditGetInfo(name, newName, newInfo, newImg, newType, newGender) {
+function pokemonEditGetInfo(id) {
     window.location.href = './edit.html';
-    let pokemonEdit = document.getElementById('nameTypedEdit').value = name;
-    let getName = document.getElementById('newNome').value = newName;
-    let getInfo = document.getElementById('newInfo').value = newInfo;
-    let getImg = document.getElementById('newImg').value = newImg;
-    let getType = document.getElementById('selectTypeEdit').value = newType;
-    let getGender = auxGetGender();
+    const infoImgsPokemons = getAllInfoImgsPokemons()
+    document.getElementById('pokemonNameEdit').value = infoImgsPokemons[id].name
 }
 
 function auxGetGender() {
@@ -27,3 +23,13 @@ function pokemonEditButton() {
         }
     }
 }
+
+/*
+
+ let pokemonEdit = document.getElementById('nameTypedEdit').value = name;
+    let getName = document.getElementById('newNome').value = newName;
+    let getInfo = document.getElementById('newInfo').value = newInfo;
+    let getImg = document.getElementById('newImg').value = newImg;
+    let getType = document.getElementById('selectTypeEdit').value = newType;
+    let getGender = auxGetGender();
+    */
