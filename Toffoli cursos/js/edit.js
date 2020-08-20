@@ -1,9 +1,14 @@
-function pokemonEditGetInfo(id) {
-    window.location.href = './edit.html';
-    const infoImgsPokemons = getAllInfoImgsPokemons()
-    document.getElementById('pokemonNameEdit').value = infoImgsPokemons[id].name
+function urlGetId(id) {
+    window.location.href = `./edit.html?id=${id}`;
 }
 
+function autoFillEditForm() {
+    const infoImgsPokemons = getAllInfoImgsPokemons()
+    let params = (new URL(document.location)).searchParams;
+    let id = params.get("id");
+    document.getElementById('pokemonNameEdit').value = infoImgsPokemons[id].name
+
+}
 function auxGetGender() {
     let radio = document.getElementsByName('sexo');
 
