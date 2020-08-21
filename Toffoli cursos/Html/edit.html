@@ -26,8 +26,8 @@
                 <div class="row">
                     <div class="col">
                         <strong><label for="">Pokemon Name: </label></strong>
-                        <input type="text" id="nameTypedEdit" placeholder="Edit your pokemon">
-                        <button onclick="pokemonEditByName()" value="Edit">Edit</button>
+                        <input class="form-control" type="text" id="nameTypedEdit" placeholder="Edit your pokemon">
+                        <button class="btn btn-default" onclick="pokemonEditByName()" value="Edit">Edit</button>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                     <div class="col"></div>
                     <div class="col-l espacamento-formulario  g-8">
                         <button required class="btn btn-dark btn-lg btn-block button-cadastrar "
-                            onclick="edit(itemPokemon,id)">Edit</button>
+                            onclick="edit(params.get('id'))">Edit</button>
                     </div>
                     <div class="col"></div>
                 </div>

@@ -9,43 +9,27 @@ function autoFillEditForm() {
     document.getElementById('nameTypedEdit').value = infoImgsPokemons[id].name
     document.getElementById('selectTypeEdit').value = infoImgsPokemons[id].type
     document.getElementById('textDescription').value = infoImgsPokemons[id].info
-    document.getElementById('linkImg').value = infoImgsPokemons[id].linkImg
+    document.getElementById('linkImg').value = infoImgsPokemons[id].img
 }
 
 
-function edit(itemPokemon, id) {
+function edit(id) {
     const infoImgsPokemons = getAllInfoImgsPokemons()
     let infoPokemon = infoImgsPokemons[id]
-    infoImgsPokemons[id] = infoPokemon
     infoPokemon.name = document.getElementById('nameTypedEdit').value
     infoPokemon.type = document.getElementById('selectTypeEdit').value
     infoPokemon.info = document.getElementById('textDescription').value
-    infoPokemon.linkImg = document.getElementById('linkImg').value
+    infoPokemon.sexo = getGender()
 
+    infoPokemon.img = document.getElementById('linkImg').value
+    infoImgsPokemons[id] = infoPokemon
     localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
-    // window.location.href = 
-}
-
-function getGender() {
-    document.querySelector("#radioF").value
-    document.querySelector("#radioM").value
-
-    if (infoImgsPokemons[id].sexo == '' || infoImgsPokemons[id].sexo == undefined) {
-
-    }
-
-
-    if (infoImgsPokemons[id].sexo == 'F') {
-        document.querySelector("#radioF").checked = true
-    }
-    if (infoImgsPokemons[id].sexo == 'M') {
-        document.querySelector("#radioM").checked = true
-    }
+    window.location.href = 'pokemonManager.html'
 }
 
 
 
-/*function auxGetGender() {
+function auxGetGender() {
     let radio = document.getElementsByName('sexo');
 
     for (let i = 0; i < radio.length; i++) {
@@ -56,7 +40,7 @@ function getGender() {
     }
 
 }
-*/
+
 function pokemonEditButton() {
     for (let i = 0; i < infoImgsPokemons.length; i++) {
         if (infoImgsPokemons[i].name == pokemonName) {

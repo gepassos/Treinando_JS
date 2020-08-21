@@ -29,3 +29,12 @@ function edit(itemPokemon, id) {
     localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
 }
 
+
+function getGender() {
+    const genderF = document.querySelector("#radioF").checked;
+    const genderM = document.querySelector("#radioM").checked;
+    if (genderF) return 'F';
+    if (genderM) return 'M';
+    return 'M'
+}
+

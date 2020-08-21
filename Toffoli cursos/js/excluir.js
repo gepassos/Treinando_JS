@@ -22,7 +22,7 @@ function pokemonRemoverById(id, name) {
     localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
     myAlert('success', `The Pokemon : ${name} was sucessfully deleted from your list.`, 'alertsExclude')
     listToExclude()
-    
+
 
 }
 
