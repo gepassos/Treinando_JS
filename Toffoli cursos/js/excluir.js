@@ -22,6 +22,7 @@ function pokemonRemoverById(id, name) {
     localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
     myAlert('success', `The Pokemon : ${name} was sucessfully deleted from your list.`, 'alertsExclude')
     listToExclude()
+    
 
 }
 
@@ -34,7 +35,7 @@ function listToExclude() {
     <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">#</th>
+            
             <th scope="col">ID</th>
             <th scope="col">Image</th>
             <th scope="col">Name</th>
@@ -53,14 +54,14 @@ function listToExclude() {
 
         myHtml += `
           <tr>
-            <td>${parseInt(index) + 1}</td>
+            
             <td>${index}</td>
             <td><img src="${dataValidation(imgsPokemons[index].img)}" width="90px" ></td>
             <td>${dataValidation(imgsPokemons[index].name)}</td>
             <td>${dataValidation(imgsPokemons[index].info.substring(0, 20))}...</td>
             <td>${dataValidation(imgsPokemons[index].sexo)}</td>
             <td>${dataValidation(imgsPokemons[index].type)}</td>
-            <td><button onclick="pokemonRemoverById(${index}, ${imgsPokemons[index].name})" class="btn btn-danger" value="Delete">Delete</button></td>
+            <td><button onclick="pokemonRemoverById(${index}, '${imgsPokemons[index].name}')" class="btn btn-danger" value="Delete">Delete</button></td>
             <td><button onclick="urlGetId(${index})" class="btn btn-danger" value="Edit">Edit</button></td>
           </tr>
                 `;

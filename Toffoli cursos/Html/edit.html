@@ -12,6 +12,7 @@
 
 <body>
 
+
     <div id="menuDiv">
     </div>
 
@@ -106,7 +107,7 @@
                     <div class="col"></div>
                     <div class="col-l espacamento-formulario  g-8">
                         <button required class="btn btn-dark btn-lg btn-block button-cadastrar "
-                            onclick="editPokemon()">Edit</button>
+                            onclick="edit(itemPokemon,id)">Edit</button>
                     </div>
                     <div class="col"></div>
                 </div>
@@ -126,7 +127,12 @@
     <script src="../js/index.js"></script>
     <script src="../js/services.js"></script>
     <script src="../js/edit.js"></script>
+    <script>
 
+        let params = (new URL(document.location)).searchParams;
+        let id = params.get("id");
+        autoFillEditForm()
+    </script>
     <script>
         objPath = {
             index: '../index.html',
