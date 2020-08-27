@@ -54,6 +54,13 @@
         removeClassNav()
         addClassNav('pokemonManager')
         listToExclude()
+        document.getElementById("filterOnChange").addEventListener("change", filterOnChange);
+        var req = [{ symbol: 'joao' }, { symbol: 'jordana' }, { symbol: '#test2' }, { symbol: 'test3' }, { symbol: 'test4' }]
+
+        var key = 'jo'
+        var result = req.filter(item => item.symbol.includes(key));
+
+        console.log(result);
     </script>
 </body>
 
