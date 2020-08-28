@@ -7,7 +7,7 @@ function pokemonRemover() {
             localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
             myAlert('success', `The Pokemon : ${nameTypedId} was sucessfully deleted from your list.`, 'alertsExclude')
 
-            listToExclude()
+            listToExclude(getAllInfoImgsPokemons())
         }
 
     }
@@ -16,21 +16,21 @@ function pokemonRemover() {
 
 
 }
-function pokemonRemoverById(id, name) {
+
+/*function pokemonRemoverById(id, name) {
     const infoImgsPokemons = getAllInfoImgsPokemons()
     infoImgsPokemons.splice(id, 1)
     localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
     myAlert('success', `The Pokemon : ${name} was sucessfully deleted from your list.`, 'alertsExclude')
     listToExclude()
-
+    setTimeout(function () { document.getElementById }, 3000)
 
 }
+*/
 
-
-function listToExclude() {
+function listToExclude(infoPokemons) {
     // {"name":"Gustavo","img":"","info":"dcasdsadsa sd sdsa","sexo":"F","type":"tipoNormal"}
 
-    const imgsPokemons = getAllInfoImgsPokemons()
     const headerHtml = `
     <table class="table">
         <thead class="thead-dark">
@@ -50,18 +50,18 @@ function listToExclude() {
     `
     let myHtml = headerHtml;
     const footerHtml = ` </table>`
-    for (index in imgsPokemons) {
+    for (index in infoPokemons) {
 
         myHtml += `
           <tr>
             
-            <td>${index}</td>
-            <td><img src="${dataValidation(imgsPokemons[index].img)}" width="90px" ></td>
-            <td>${dataValidation(imgsPokemons[index].name)}</td>
-            <td>${dataValidation(imgsPokemons[index].info.substring(0, 20))}...</td>
-            <td>${dataValidation(imgsPokemons[index].sexo)}</td>
-            <td>${dataValidation(imgsPokemons[index].type)}</td>
-            <td><button onclick="pokemonRemoverById(${index}, '${imgsPokemons[index].name}')" class="btn btn-danger" value="Delete">Delete</button></td>
+            <td>${infoPokemons[index].id}</td>
+            <td><img src="${dataValidation(infoPokemons[index].img)}" width="90px" ></td>
+            <td>${dataValidation(infoPokemons[index].name)}</td>
+            <td>${dataValidation(infoPokemons[index].info.substring(0, 20))}...</td>
+            <td>${dataValidation(infoPokemons[index].sexo)}</td>
+            <td>${dataValidation(infoPokemons[index].type)}</td>
+            <td><button onclick="pokemonRemoverById(${index}, '${infoPokemons[index].name}')" class="btn btn-danger" value="Delete">Delete</button></td>
             <td><button onclick="urlGetId(${index})" class="btn btn-danger" value="Edit">Edit</button></td>
           </tr>
                 `;

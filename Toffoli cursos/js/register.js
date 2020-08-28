@@ -7,9 +7,8 @@ function getFormCreatePokemon() {
     let sexo = getGender();
 
     if (namePokemon && selectType && linkImg && sexo) {
-        console.log({ name: namePokemon, img: linkImg, info: textDescription, sexo, type: selectType });
 
-        return { name: namePokemon, img: linkImg, info: textDescription, sexo, type: selectType };
+        return { name: namePokemon, img: linkImg, info: textDescription, sexo, type: selectType, id: (getAllInfoImgsPokemons().length + 1) };
     }
 
     return false;
@@ -25,11 +24,16 @@ function clearFormPokemon() {
 
 function cadastrarPokemon() {
     const infoPokemon = getFormCreatePokemon()
+    let namePokemon = document.getElementById('nomePokemonCadastrado').value
     if (!infoPokemon)
         return alert('Please fill out all the fields correctly')
 
     setinfoImgsPokemons(infoPokemon)
+    myAlert('success', `The Pokemon : ${namePokemon} was sucessfully registered in your list.`, 'alertsRegister')
     clearFormPokemon()
+
+
+
     // window.location.href = 'pokemonManager.html'
 }
 

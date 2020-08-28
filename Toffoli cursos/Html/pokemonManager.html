@@ -16,19 +16,27 @@
 
     <div class="body-content borderdiv">
         <div class="border-cadastro">
+
             <div>
                 <h1 class="title">Pokemon Manager</h1>
             </div>
+
+            <div id='alertsEdit'></div>
 
             <div class="form ">
                 <div class="row">
                     <div class="col">
                         <strong><label for="">Pokemon Name: </label></strong>
-                        <input type="text" id="nameTyped" placeholder="Delete your pokemon">
-                        <button onclick="pokemonRemover()" class="btn btn-danger" value="Delete">Delete</button>
+                        <input type="text" id="nameTyped" placeholder="Find your pokemon">
+                        <button onclick="listToExclude(filterOnChange()) " class="btn btn-dark " value=" Filter"> <img
+                                width="28px" src="..\Imgs\filterWhite.png">Filter</button>
 
+                        <button onclick="listToExclude(getAllInfoImgsPokemons()); clearFilter()" class="btn btn-danger "
+                            value="CleanrFilter"><img width="28px" src="..\Imgs\cleanFilterWhite.png"></button>
                     </div>
+
                 </div>
+                <br>
             </div>
             <div id="alertsExclude"></div>
             <div id="listToRemove"></div>
@@ -53,15 +61,26 @@
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('pokemonManager')
-        listToExclude()
-        document.getElementById("filterOnChange").addEventListener("change", filterOnChange);
-        var req = [{ symbol: 'joao' }, { symbol: 'jordana' }, { symbol: '#test2' }, { symbol: 'test3' }, { symbol: 'test4' }]
+        listToExclude(getAllInfoImgsPokemons())
+        filterOnChange()
 
-        var key = 'jo'
-        var result = req.filter(item => item.symbol.includes(key));
 
-        console.log(result);
     </script>
+
+
 </body>
 
 </html>
+
+<script>
+
+    let params = (new URL(document.location)).searchParams;
+    let id = params.get("id");
+    let alerta;
+    if (id) {
+        const infoImgsPokemons = getAllInfoImgsPokemons()
+        let alerta = setTimeout(function alertando() { myAlert('success', `The Pokemon : ${infoImgsPokemons[id].name} was sucessfully edited from your list.`, 'alertsEdit') }, 0)
+
+    }
+
+</script>

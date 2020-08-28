@@ -30,13 +30,33 @@ function edit(itemPokemon, id) {
 }
 
 function filterOnChange() {
-    
+    const infoImgsPokemons = getAllInfoImgsPokemons()
+    const infoPokemonUpper = infoImgsPokemons.map(pokemon => {
+        pokemon.name = pokemon.name.toUpperCase();
+        return pokemon;
+    })
+    var key = document.getElementById('nameTyped').value.toUpperCase();
+    var result = infoPokemonUpper.filter(item => item.name.includes(key));
+
+    return result.map(pokemon => {
+        pokemon.name = pokemon.name.toLowerCase()
+        pokemon.name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+        return pokemon;
+    })
+
+
 }
-function getGender() {  
+
+function clearFilter() {
+    document.getElementById('nameTyped').value = ''
+}
+function getGender() {
     const genderF = document.querySelector("#radioF").checked;
     const genderM = document.querySelector("#radioM").checked;
     if (genderF) return 'F';
     if (genderM) return 'M';
     return 'M'
 }
+
+
 

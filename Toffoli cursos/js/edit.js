@@ -24,7 +24,10 @@ function edit(id) {
     infoPokemon.img = document.getElementById('linkImg').value
     infoImgsPokemons[id] = infoPokemon
     localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
-    window.location.href = 'pokemonManager.html'
+
+    window.location.href = `pokemonManager.html?id=${id}`
+
+    
 }
 
 
