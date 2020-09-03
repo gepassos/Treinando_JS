@@ -1,4 +1,4 @@
-function pokemonRemover() {
+/*function pokemonRemover() {
     const infoImgsPokemons = getAllInfoImgsPokemons()
     let nameTypedId = document.getElementById('nameTyped').value
     for (let i = 0; i < infoImgsPokemons.length; i++) {
@@ -15,18 +15,17 @@ function pokemonRemover() {
     document.getElementById('nameTyped').value = '';
 
 
-}
+}*/
 
-/*function pokemonRemoverById(id, name) {
+function pokemonRemoverById(id, name) {
     const infoImgsPokemons = getAllInfoImgsPokemons()
     infoImgsPokemons.splice(id, 1)
     localStorage.setItem('infoImgsPokemons', JSON.stringify(infoImgsPokemons))
     myAlert('success', `The Pokemon : ${name} was sucessfully deleted from your list.`, 'alertsExclude')
-    listToExclude()
-    setTimeout(function () { document.getElementById }, 3000)
+    listToExclude(getAllInfoImgsPokemons())
 
 }
-*/
+
 
 function listToExclude(infoPokemons) {
     // {"name":"Gustavo","img":"","info":"dcasdsadsa sd sdsa","sexo":"F","type":"tipoNormal"}
