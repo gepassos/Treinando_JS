@@ -74,3 +74,8 @@ h1:hover {
     font-family: 'Verdana';
 } 
 
+#divCarousel {
+    width: 1000px;
+    height: 300px;
+    border: 1px solid #000;
+}

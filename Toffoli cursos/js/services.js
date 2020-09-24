@@ -59,44 +59,4 @@ function getGender() {
 }
 
 
-function carousel() {
-    imgsPokemons = getAllInfoImgsPokemons()
-    const elementoCarousel = document.getElementById('divCarousel')
-    let myHtml = `
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-    <div class="carousel-inner">
-
-        <div class="carousel-item active">
-            <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Pok%C3%A9mon_Charizard_art.png"
-                class="img-fluid d-block">
-        </div>
-
-        <div class="carousel-item">
-            <img src="https://vignette.wikia.nocookie.net/pokemonet/images/2/21/001Bulbasaur.png/revision/latest/scale-to-width-down/340?cb=20130504203725&path-prefix=pt-br"
-                class="img-fluid d-block">
-        </div>
-
-        <div class="carousel-item">
-            <img src="" class="img-fluid d-block">
-        </div>
-
-    </div>
-
-
-    <a class="carousel-control-prev" href="#divCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="sr-only">Prev</span>
-    </a>
-
-    <a class="carousel-control-next" href="#divCarousel" role="button" data-slide="next">
-
-        <span class="carousel-control-next-icon"></span>
-        <span class="sr-only">Next</span>
-    </a>
-
-</div>
-    `;
-
-    elementoCarousel.innerHTML = myHtml;
-}

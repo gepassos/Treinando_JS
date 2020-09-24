@@ -10,6 +10,12 @@ function autoFillEditForm() {
     document.getElementById('selectTypeEdit').value = infoImgsPokemons[id].type
     document.getElementById('textDescription').value = infoImgsPokemons[id].info
     document.getElementById('linkImg').value = infoImgsPokemons[id].img
+    if (infoImgsPokemons[id].sexo == 'F') {
+        document.querySelector("#radioF").checked = true
+    }
+    if (infoImgsPokemons[id].sexo == 'M') {
+        document.querySelector("#radioM").checked = true
+    }
 }
 
 
@@ -27,7 +33,7 @@ function edit(id) {
 
     window.location.href = `pokemonManager.html?id=${id}`
 
-    
+
 }
 
 
@@ -50,6 +56,42 @@ function pokemonEditButton() {
             infoImgsPokemons.splice(i, 1, newName)
         }
     }
+}
+
+function disableEdit() {
+    if (idDisabled == 'true') {
+        document.querySelector("#nameTypedEdit").disabled = true
+        document.querySelector("#pokemonNameEdit").disabled = true
+        document.querySelector("#selectTypeEdit").disabled = true
+        document.querySelector("#radioM").disabled = true
+        document.querySelector("#radioF").disabled = true
+        document.querySelector("#textDescription").disabled = true
+        document.querySelector("#linkImg").disabled = true
+        document.querySelector("#editButton").disabled = true
+        enableEditButton()
+    }
+
+
+}
+
+function enableEditButton() {
+    const myHtml = `<button id="enableEdit" style="margin-left: 15px;" required class="btn btn-primary btn-lg button-cadastrar"
+onclick="enableEdit()">Enable Edit</button>`
+
+    const myDiv = document.getElementById("enableEdit")
+
+    myDiv.innerHTML = myHtml;
+
+
+}
+
+function enableEdit() {
+    window.location.href = `./edit.html?id=${id}`
+}
+
+function pokeImg() {
+    let imagem = document.querySelector("#linkImg").value
+    document.getElementById("pokeImg").src = imagem
 }
 
 /*

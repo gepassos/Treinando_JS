@@ -93,9 +93,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col" style="text-align: center;">
                         <strong><label for="">Image Link: </label></strong>
                         <input required type="text" class="form-control" id="linkImg">
+                        <img src="" class="" id="pokeImg" width="300px" height="300px" style="margin-top: 15px;">
+
                     </div>
                 </div>
 
@@ -103,11 +105,14 @@
             </div>
 
             <div>
-                <div class="row">
+                <div class=" row">
                     <div class="col"></div>
                     <div class="col-l espacamento-formulario  g-8">
-                        <button required class="btn btn-dark btn-lg btn-block button-cadastrar "
+                        <button id="editButton" required class="btn btn-dark btn-lg btn-block button-cadastrar  "
                             onclick="edit(params.get('id'))">Edit</button>
+                    </div>
+                    <div id="enableEdit">
+
                     </div>
                     <div class="col"></div>
                 </div>
@@ -116,14 +121,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
     <script src="../js/index.js"></script>
     <script src="../js/services.js"></script>
     <script src="../js/edit.js"></script>
@@ -131,7 +128,10 @@
 
         let params = (new URL(document.location)).searchParams;
         let id = params.get("id");
+        let idDisabled = params.get("idDisabled")
+        disableEdit()
         autoFillEditForm()
+        pokeImg()
     </script>
     <script>
         objPath = {
