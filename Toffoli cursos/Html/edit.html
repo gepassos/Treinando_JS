@@ -27,7 +27,7 @@
                     <div class="col">
                         <strong><label for="">Pokemon Name: </label></strong>
                         <input class="form-control" type="text" id="nameTypedEdit" placeholder="Edit your pokemon">
-                        <button class="btn btn-default" onclick="pokemonEditByName()" value="Edit">Edit</button>
+
                     </div>
                 </div>
             </div>
@@ -96,7 +96,9 @@
                     <div class="col" style="text-align: center;">
                         <strong><label for="">Image Link: </label></strong>
                         <input required type="text" class="form-control" id="linkImg">
-                        <img src="" class="" id="pokeImg" width="300px" height="300px" style="margin-top: 15px;">
+                        <a href="#bg"><img src="" class="" id="pokeImg" width="300px" height="300px"
+                                style="margin-top: 15px;">
+                        </a>
 
                     </div>
                 </div>
@@ -117,10 +119,15 @@
                     <div class="col"></div>
                 </div>
             </div>
-
-
         </div>
     </div>
+
+    <div id="bg"></div>
+    <div class="box">
+        <img src="" id="imgLightBox">
+        <a href="" id="close"> X</a>
+    </div>
+
     <script src="../js/index.js"></script>
     <script src="../js/services.js"></script>
     <script src="../js/edit.js"></script>

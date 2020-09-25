@@ -61,7 +61,7 @@ function listToExclude(infoPokemons) {
             <td>${dataValidation(infoPokemons[index].sexo)}</td>
             <td>${dataValidation(infoPokemons[index].type)}</td>
             <td><button onclick="pokemonRemoverById(${index}, '${infoPokemons[index].name}')" class="btn btn-danger" value="Delete">Delete</button></td>
-            <td><button onclick="urlGetId(${index})" class="btn btn-danger" value="Edit">Edit</button></td>
+            <td><button onclick="urlGetId(${infoPokemons[index].id})" class="btn btn-danger" value="Edit">Edit</button></td>
           </tr>
                 `;
 

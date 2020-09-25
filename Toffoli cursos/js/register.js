@@ -8,32 +8,33 @@ function getFormCreatePokemon() {
 
     if (namePokemon && selectType && linkImg && sexo) {
 
-        return { name: namePokemon, img: linkImg, info: textDescription, sexo, type: selectType, id: (getAllInfoImgsPokemons().length + 1) };
+        return {
+            name: namePokemon, img: linkImg, info: textDescription, sexo, type: selectType, id: new Date().valueOf()}
+        }
+
+        return false;
     }
 
-    return false;
-}
+    function clearFormPokemon() {
+        document.getElementById('nomePokemonCadastrado').value = ''
+        document.getElementById('selectTipo').value = ''
+        document.getElementById('linkImg').value = ''
+        document.getElementById('textDescription').value = ''
 
-function clearFormPokemon() {
-    document.getElementById('nomePokemonCadastrado').value = ''
-    document.getElementById('selectTipo').value = ''
-    document.getElementById('linkImg').value = ''
-    document.getElementById('textDescription').value = ''
+    }
 
-}
+    function cadastrarPokemon() {
+        const infoPokemon = getFormCreatePokemon()
+        let namePokemon = document.getElementById('nomePokemonCadastrado').value
+        if (!infoPokemon)
+            return alert('Please fill out all the fields correctly')
 
-function cadastrarPokemon() {
-    const infoPokemon = getFormCreatePokemon()
-    let namePokemon = document.getElementById('nomePokemonCadastrado').value
-    if (!infoPokemon)
-        return alert('Please fill out all the fields correctly')
-
-    setinfoImgsPokemons(infoPokemon)
-    myAlert('success', `The Pokemon : ${namePokemon} was sucessfully registered in your list.`, 'alertsRegister')
-    clearFormPokemon()
+        setinfoImgsPokemons(infoPokemon)
+        myAlert('success', `The Pokemon : ${namePokemon} was sucessfully registered in your list.`, 'alertsRegister')
+        clearFormPokemon()
 
 
 
-    // window.location.href = 'pokemonManager.html'
-}
+        // window.location.href = 'pokemonManager.html'
+    }
 

@@ -9,7 +9,101 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
 
+    <style>
+        .carousel,
+        .carousel-inner>.item {
+            position: relative;
+            width: 100%;
+            max-width: 1299px;
+            max-height: 450px;
+            margin: 0px auto;
+            background-size: 100%;
+            background-size: cover;
+            overflow: hidden;
+        }
 
+        .carousel-inner>.item:after {
+            padding-top: 34.61538%;
+            /* we maintain aspect ratio of header 450px:1300px using this */
+            display: block;
+            content: '';
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            z-index: 3;
+            width: 60%;
+            margin-left: -30%;
+            text-align: center;
+        }
+
+        .carousel-indicators>a {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: gray;
+            color: gray;
+            border-radius: 100%;
+            margin: 0 5px;
+        }
+
+        .carousel-indicators>a:hover,
+        .carousel-indicators>a.active {
+            background: #b10031;
+        }
+
+        .carousel .carousel-control {
+            display: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 9;
+            width: 10%;
+            text-align: center;
+        }
+
+        .carousel .carousel-control.left {
+            left: 0;
+        }
+
+        .carousel .carousel-control.right {
+            right: 0;
+        }
+
+        .carousel .carousel-control>.fa {
+            font-size: 80px;
+            color: #AAA;
+            top: 50%;
+            position: absolute;
+            height: 80px;
+            margin-top: -40px;
+        }
+
+        .carousel .carousel-control.left>.fa {
+            left: 0;
+        }
+
+        .carousel .carousel-control.right>.fa {
+            right: 0;
+        }
+
+        .carousel:hover .carousel-control.show {
+            display: block;
+        }
+
+        .carousel-inner {
+            width: 10000px;
+            position: relative;
+            left: 0;
+            transition: all .5s;
+        }
+
+        .carousel-inner>.item {
+            float: left;
+        }
+    </style>
 </head>
 
 
@@ -18,7 +112,22 @@
 
 
     <div id="menuDiv"></div>
-    <div id="divCarousel"></div>
+    <!-- carrocel -->
+    <div>
+        <div class="carousel hidden-mb">
+            <div class="carousel-indicators" id="carouselIndicator">
+                <a href="#" slide="0" class="active"></a>
+                <a href="#" slide="1"></a>
+
+            </div>
+            <div class="carousel-inner" id="carouselImg">
+                <img class="item " src="https://vignette.wikia.nocookie.net/pokemonet/images/2/21/001Bulbasaur.png/revision/latest/scale-to-width-down/340?cb=20130504203725&path-prefix=pt-br"></img>
+
+            </div>
+            <a href="#" class="carousel-control left show" slide="prev"><i class="fa fa-angle-left"></i></a>
+            <a href="#" class="carousel-control right show" slide="next"><i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
 
     <div class="body-content ">
 
@@ -42,6 +151,7 @@
         initLocalStorage(infoImgsPokemons)
         removeClassNav()
         addClassNav('home')
+        carousel()
     </script>
 </body>
 

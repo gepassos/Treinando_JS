@@ -33,7 +33,7 @@ function setInfoImg() {
                 </p
                 
                 <p>
-                <a onclick="urlGetIdDisabled(${infoPokemon.id})">
+                <a onclick="urlGetIdDisabled(${infoPokemon.id})" >
                 <img src="${infoPokemon.img}" width = 450px height = 350px>
                 </a>
                </p>
@@ -97,5 +97,5 @@ function menuDiv(objPath) {
 }
 
 function urlGetIdDisabled(id) {
-    window.location.href = `./Html/edit.html?idDisabled=true&id=${id - 1}`;
+    window.location.href = `./Html/edit.html?idDisabled=true&id=${id}`;
 }
